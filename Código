@@ -39,29 +39,16 @@ public class Ex4 {
             
             if(decisao == 1){ //opção de alterar compromisso
                
-                while(diaValido!=true){
-                    System.out.println("Por favor selecione o dia do mês");
-                    dia =  scan.nextInt();
-                    if(1<=dia && dia<=30){
-                        System.out.println("Dia selecionado!");
-                        diaValido = true;
-                    }else{
-                        System.out.println("Dia inválido");
-                        diaValido = false;
-                    }
-                }                  
+                System.out.println("Por favor selecione o dia do mês");
+                dia = scan.nextInt();
+
+                diaHora.DiaValido(dia);
                 
-                while(horaValida !=true){
-                    System.out.println("Por favor informe a hora que deseja incluir seu compromisso:");
-                    hora = scan.nextInt();
-                    if(hora>=1 && hora <=24){
-                       horaValida = true;
-                        System.out.println("Hora selecionada!");
-                    }else{
-                        System.out.println("Hora inválida, por favor escolha um valor de 1 a 24");
-                        horaValida = false;
-                    }
-                } 
+            	System.out.println("Por favor informe a hora do seu compromisso:");
+                hora = scan.nextInt();
+                
+                diaHora.HoraValida(hora);
+                
                 System.out.println("Informe seu compromisso:");
                 compromisso = scan.next();
                 compromissos[dia-1][hora-1] = compromisso;
