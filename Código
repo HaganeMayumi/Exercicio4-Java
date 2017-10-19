@@ -4,6 +4,7 @@ public class Ex4 {
     
     public static void main(String[] args){
         
+        DiaEHora diaHora = new DiaEHora();
         Scanner scan = new Scanner(System.in);
         
         int[][] calendario = new int[5][6];
